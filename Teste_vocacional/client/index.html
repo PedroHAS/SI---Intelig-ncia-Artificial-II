@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Vocacional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Teste Vocacional</h1>
+        <form id="vocationalTestForm">
+            <div id="questionContainer">
+                <!-- Pergunta 1 -->
+                <div class="question" id="q1">
+                    <label for="q1">Eu gosto de pensar sobre questões numéricas e examinar as estatísticas:</label>
+                    <select id="q1-select" name="q1">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="question" id="q2" style="display: none;">
+                    <label for="q2">Gosto de cuidar das minhas plantas em casa:</label>
+                    <select id="q2-select" name="q2">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 3 -->
+                <div class="question" id="q3" style="display: none;">
+                    <label for="q3">Muitas vezes penso sobre a influência que tenho sobre os outros:</label>
+                    <select id="q3-select" name="q3">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 4 -->
+                <div class="question" id="q4" style="display: none;">
+                    <label for="q4">Eu leio e aprecio a poesia e, ocasionalmente, escrevo a minha própria:</label>
+                    <select id="q4-select" name="q4">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 5 -->
+                <div class="question" id="q5" style="display: none;">
+                    <label for="q5">Ver as coisas em três dimensões é fácil para mim, e eu gosto de fazer as coisas em três dimensões:</label>
+                    <select id="q5-select" name="q5">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 6 -->
+                <div class="question" id="q6" style="display: none;">
+                    <label for="q6">Eu tenho um bom equilíbrio e coordenação olho-mão e me sinto confortável em esportes que usam uma bola:</label>
+                    <select id="q6-select" name="q6">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 7 -->
+                <div class="question" id="q7" style="display: none;">
+                    <label for="q7"> Eu sou bom em tocar um instrumento e cantar:</label>
+                    <select id="q7-select" name="q7">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 8 -->
+                <div class="question" id="q8" style="display: none;">
+                    <label for="q8">Fico ansioso ao visitar o zoológico:</label>
+                    <select id="q8-select" name="q8">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 9 -->
+                <div class="question" id="q9" style="display: none;">
+                    <label for="q9">Gosto de ler e leio diariamente:</label>
+                    <select id="q9-select" name="q9">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 10 -->
+                <div class="question" id="q10" style="display: none;">
+                    <label for="q10"> Eu costumo entender as coisas ao meu redor através de um sentido matemático:</label>
+                    <select id="q10-select" name="q10">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 11 -->
+                <div class="question" id="q11" style="display: none;">
+                    <label for="q11">Eu gosto de manter um diário de minhas experiências:</label>
+                    <select id="q11-select" name="q11">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 12 -->
+                <div class="question" id="q12" style="display: none;">
+                    <label for="q12">Eu gosto de estar com todos os diferentes tipos de pessoas:</label>
+                    <select id="q12-select" name="q12">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 13 -->
+                <div class="question" id="q13" style="display: none;">
+                    <label for="q13">Minha capacidade de desenhar é reconhecida e elogiada por outros:</label>
+                    <select id="q13-select" name="q13">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 14 -->
+                <div class="question" id="q14" style="display: none;">
+                    <label for="q14">Minha coordenação me destaca em atividades de alta velocidade:</label>
+                    <select id="q14-select" name="q14">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 15 -->
+                <div class="question" id="q15" style="display: none;">
+                    <label for="q15">Eu sou sempre totalmente honesto comigo mesmo:</label>
+                    <select id="q15-select" name="q15">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 16 -->
+                <div class="question" id="q16" style="display: none;">
+                    <label for="q16">Eu respondo a todas as pessoas com entusiasmo, livre de viés ou preconceito:</label>
+                    <select id="q16-select" name="q16">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 17 -->
+                <div class="question" id="q17" style="display: none;">
+                    <label for="q17">Eu gosto de estar fisicamente apto:</label>
+                    <select id="q17-select" name="q17">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 18 -->
+                <div class="question" id="q18" style="display: none;">
+                    <label for="q18">Gosto de solucionar quebra-cabeças:</label>
+                    <select id="q18-select" name="q18">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 19 -->
+                <div class="question" id="q19" style="display: none;">
+                    <label for="q19">Gosto de estar ao ar livre e praticar diferentes esportes:</label>
+                    <select id="q19-select" name="q19">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+
+                <!-- Pergunta 20 -->
+                <div class="question" id="q20" style="display: none;">
+                    <label for="q20">A música é muito importante para mim na vida diária:</label>
+                    <select id="q20-select" name="q20">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 21 -->
+                <div class="question" id="q21" style="display: none;">
+                    <label for="q21">Eu gosto de aprender novas palavras e faço isso facilmente:</label>
+                    <select id="q21-select" name="q21">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 22 -->
+                <div class="question" id="q22" style="display: none;">
+                    <label for="q22">Eu sinto que as pessoas de todas as idades gostam de mim:</label>
+                    <select id="q22-select" name="q22">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 23 -->
+                <div class="question" id="q23" style="display: none;">
+                    <label for="q23">Sinto-me seguro quando estou com estranhos:</label>
+                    <select id="q23-select" name="q23">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 24 -->
+                <div class="question" id="q24" style="display: none;">
+                    <label for="q24">Costumo procurar fraquezas em mim que eu vejo nos outros:</label>
+                    <select id="q24-select" name="q24">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+
+                <!-- Pergunta 25 -->
+                <div class="question" id="q25" style="display: none;">
+                    <label for="q25">Muitas vezes penso sobre os problemas em minha comunidade, estado e / ou mundo e que eu posso fazer para ajudar a corrigir qualquer um deles:</label>
+                    <select id="q25-select" name="q25">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+                <!-- Pergunta 26 -->
+                <div class="question" id="q26" style="display: none;">
+                    <label for="q26">Eu tenho um bom senso de afinação, tempo e ritmo:</label>
+                    <select id="q26-select" name="q26">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div><!-- Pergunta 27 -->
+                <div class="question" id="q27" style="display: none;">
+                    <label for="q27">Eu sempre sei onde estou em relação à minha casa:</label>
+                    <select id="q27-select" name="q27">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+
+
+                <!-- Pergunta 28 -->
+                <div class="question" id="q28" style="display: none;">
+                    <label for="q28">Gosto de caminhar em lugares naturais:</label>
+                    <select id="q28-select" name="q28">
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">1 - Discordo Totalmente</option>
+                        <option value="2">2 - Discordo</option>
+                        <option value="3">3 - Neutro</option>
+                        <option value="4">4 - Concordo</option>
+                        <option value="5">5 - Concordo Totalmente</option>
+                    </select>
+                    <button type="button" onclick="nextQuestion()">Próxima</button>
+                </div>
+
+            </div>
+
+            <!-- Barra de Progresso -->
+            <div class="progress">
+                <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+            </div>
+
+            <!-- Resultado Final -->
+            <div class="result" id="result" style="display: none;">
+                <h2>Seu Curso Sugerido:</h2>
+                <p id="suggestedCourses"></p>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
